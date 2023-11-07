@@ -1,7 +1,8 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {IMovieState, movieSliceActions} from '../../../redux/movieSlice';
+import IMovieState from '../../../../types/IMovieState';
+import {movieSliceActions} from '../../../../redux/movieSlice';
 
 const Fans = () => {
   const movieData = useSelector((state: {movie: IMovieState}) => state.movie);
@@ -20,11 +21,11 @@ const Fans = () => {
       <View style={styles.fans_container}>
         <View style={styles.block}>
           <Text style={styles.text}>{movieData.fans.female.length}</Text>
-          <Text style={styles.text}>Female Fans</Text>
+          <Text style={styles.text}>Female</Text>
         </View>
         <View style={styles.block}>
           <Text style={styles.text}>{movieData.fans.male.length}</Text>
-          <Text style={styles.text}>Male Fans</Text>
+          <Text style={styles.text}>Male</Text>
         </View>
         <View style={styles.block}>
           <Text style={styles.text}>{movieData.fans.others.length}</Text>

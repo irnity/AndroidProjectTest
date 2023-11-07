@@ -24,9 +24,11 @@ export const movieFetch = createAsyncThunk(
       const url = 'https://swapi.dev/api/people/?page=' + pageNumber;
       const responce = await fetch(url);
       const {count, results} = await responce.json();
-      results.forEach((person: IPerson) => {
-        person.selected = false;
-      });
+      const formattedResults = results.map((person: IPerson) => ({
+        ...person,
+        selected: false,
+      }));
+
       const totalPage = Math.ceil(count / 10);
 
       const firstPerson = (pageNumber - 1) * 10 + 1;
@@ -34,7 +36,7 @@ export const movieFetch = createAsyncThunk(
 
       return {
         count,
-        results,
+        results: formattedResults,
         page: pageNumber,
         totalPage,
         firstPerson,

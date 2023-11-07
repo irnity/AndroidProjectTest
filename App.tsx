@@ -3,11 +3,11 @@ import {SafeAreaView, StyleSheet} from 'react-native';
 
 import {Provider} from 'react-redux';
 import store from './src/redux';
-import MainScreen from './src/components/mainScreen/MainScreen';
+import MainScreen from './src/components/MainScreen/MainScreen';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import DetailScreen from './src/components/detailScreen/DetailScreen';
+import DetailScreen from './src/components/DetailScreen/DetailScreen';
 
 const Stack = createNativeStackNavigator();
 

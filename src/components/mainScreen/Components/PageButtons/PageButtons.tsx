@@ -1,7 +1,7 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {useSelector} from 'react-redux';
-import {IMovieState} from '../../../redux/movieSlice';
+import {IMovieState} from '../../../../redux/movieSlice';
 
 type Props = {
   fetchData: (page: number) => void;

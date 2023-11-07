@@ -1,9 +1,10 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import {Eye, Heart} from 'react-native-feather';
-import {IMovieState} from '../../../redux/movieSlice';
+
 import {useSelector} from 'react-redux';
-import IPerson from '../../../types/IPerson';
+import IPerson from '../../../../types/IPerson';
+import IMovieState from '../../../../types/IMovieState';
 
 type Props = {
   item: IPerson;

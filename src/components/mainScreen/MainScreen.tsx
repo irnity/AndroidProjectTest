@@ -1,11 +1,12 @@
 import {StyleSheet, View} from 'react-native';
 import React from 'react';
-import Fans from './Fans/Fans';
+import Fans from './Components/Fans/Fans';
 import UseData from '../../hooks/useData';
-import List from './ListItem/List';
-import PageButtons from './PageButtons/PageButtons';
-import {IMovieState} from '../../redux/movieSlice';
+import List from './Components/List/List';
+import PageButtons from './Components/PageButtons/PageButtons';
+
 import {useSelector} from 'react-redux';
+import IMovieState from '../../types/IMovieState';
 
 interface props {
   navigation: {

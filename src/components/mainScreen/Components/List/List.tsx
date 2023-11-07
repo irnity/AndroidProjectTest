@@ -1,10 +1,10 @@
 import {ActivityIndicator, FlatList, StyleSheet, View} from 'react-native';
 import React from 'react';
-import Item from './Item';
+import Item from './ListItem';
 import {useSelector} from 'react-redux';
-import {IMovieState} from '../../../redux/movieSlice';
-import IPerson from '../../../types/IPerson';
-import Description from './Description';
+import IMovieState from '../../../../types/IMovieState';
+import IPerson from '../../../../types/IPerson';
+import Description from './ListDescription';
 
 type Props = {
   addFansHandler: (item: IPerson) => void;

@@ -1,8 +1,9 @@
 import {useEffect} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
-import {IMovieState, movieFetch, movieSliceActions} from '../redux/movieSlice';
+import {useDispatch} from 'react-redux';
 import {ThunkDispatch} from '@reduxjs/toolkit';
 import IPerson from '../types/IPerson';
+import IMovieState from '../types/IMovieState';
+import {movieFetch, movieSliceActions} from '../redux/movieSlice';
 
 interface props {
   navigation: {
@@ -10,7 +11,6 @@ interface props {
   };
 }
 const UseData = ({navigation}: props) => {
-  const movieData = useSelector((state: {movie: IMovieState}) => state.movie);
   const dispatch = useDispatch<ThunkDispatch<IMovieState, number, any>>();
 
   const fetchData = (pageNumber: number) => {
@@ -22,7 +22,6 @@ const UseData = ({navigation}: props) => {
   };
 
   const navigationHandler = (person: IPerson) => {
-    console.log(person);
     navigation.navigate('DetailScreen', {person});
   };
 
